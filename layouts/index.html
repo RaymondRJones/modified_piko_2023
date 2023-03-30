@@ -97,6 +97,69 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
 </section>
 {{ end }}
 
+{{- if not (.Site.Params.homepage.disableProgramsSection) }}
+<section>
+  <hgroup class="text-center">
+    <h2>{{.Site.Params.homepage.programsTitle}}</h2>
+    <h3>{{.Site.Params.homepage.programsDescription}}</h3>
+  </hgroup>
+  <div class="container">
+    <div class="grid">
+      <div class="container" style="text-align: center;">
+        <img
+          src="{{.Site.Params.homepage.programsImgUrl}}"
+          alt="{{.Site.Params.author}}"
+          width="700"
+          height="450"
+          layout="intrinsic"
+        ></img>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <hgroup class="text-center">
+    <h2>{{.Site.Params.homepage.programsTitleAdults}}</h2>
+    <h3>{{.Site.Params.homepage.programsDescriptionAdults}}</h3>
+  </hgroup>
+  <div class="container">
+    <div class="grid">
+      <div class="container" style="text-align: center;">
+        <img
+          src="{{.Site.Params.homepage.programsAdultImgUrl}}"
+          alt="{{.Site.Params.author}}"
+          width="700"
+          height="450"
+          layout="intrinsic"
+        ></img>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{- if not (.Site.Params.homepage.disableScheduleSection) }}
+<section>
+  <hgroup class="text-center">
+    <h2>{{.Site.Params.homepage.scheduleTitle}}</h2>
+    <h3>{{.Site.Params.homepage.scheduleDescription}}</h3>
+  </hgroup>
+  <div class="container">
+    <div class="grid">
+      <div class="container" style="text-align: center;">
+        <img
+          src="{{.Site.Params.homepage.scheduleImgUrl}}"
+          alt="{{.Site.Params.author}}"
+          width="900"
+          height="450"
+          layout="intrinsic"
+        ></img>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
 {{- if not (.Site.Params.homepage.disablePortfolioSection) }}
 <section>
   <hgroup class="text-center">
